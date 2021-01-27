@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="[art-keywords]" />
+    <meta name="description" content="[art-description]"/>
+    <link rel="stylesheet" type="text/css" href="[art-path]include/mmenu/jquery.mmenu.css">
+    <link rel="stylesheet" type="text/css" href="[art-path]include/theme-styles.css">
+    <script src="[art-path]include/mmenu/jquery.mmenu.js" type="text/javascript"></script>
+    <title>[art-title]</title>
+    [art-header]
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#menu").mmenu({
+                /*  UNCOMMENT TO ADD YOUR LOGO IN TO MENU HEADER    */
+                /*
+                navbar: {
+                    title: '<img src="[art-sitelogo]" style="max-width: 120px;">'
+                },
+                */
+                "extensions": [
+                    "position-right"
+                ],
+            }).css("visibility","visible");
+
+            var menuAPI = $("#menu").data( "mmenu" );
+
+            $("#menu-close").click(function() {
+                menuAPI.close();
+            });
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<nav id="menu" style="visibility: hidden;">
+    <ul>
+        <li>
+            <span>
+                <form action="javascript:artSearch('[art-search]','art-search-field');" class="cross-center">
+                    <input type="text" id="art-search-field" class="art-search-box" placeholder="Search">
+                    <input type="image" src="[art-path]images/search.svg" class="hover" style="margin-left:4px; width: 40px; cursor: pointer;">
+                </form>
+            </span>
+        </li>
+        <li id="menu-close"><span><strong>Close</strong></span></li>
+        <li><span><strong><a href="#">Pellentesque</a></strong></span></li>
+        <li><span><strong><a href="#">Malesuada</a></strong></span>
+            <ul>
+                <li><span><strong><a href="#">Donec</a></strong></span></li>
+                <li><span><strong><a href="#">Tincidunt</a></strong></span></li>
+                <li><span><strong><a href="#">Maecenas</a></strong></span></li>
+            </ul>
+        </li>
+        <li><span><strong><a href="#">Donec</a></strong></span></li>
+        <li><span><strong><a href="#">Tincidunt</a></strong></span></li>
+        <li><span><strong><a href="#">Maecenas</a></strong></span></li>
+    </ul>
+</nav>
+<!-- sticky footer start -->
+<div class="sticky-footer">
+    <div class="header d-none d-md-flex cross-center">
+        <div class="col-4 cross-center soft-down" style="animation-delay: 700ms">
+            <img class="site-logo" onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+        </div>
+        <div class="col-8 cross-center end">
+            <div class="cross-center center">
+                <a class="soft-down" style="animation-delay: 800ms;" href="[art-facebook]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+                <a class="soft-down" style="animation-delay: 900ms;" href="[art-twitter]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-twitter.svg" alt="twitter"></a>
+                <a class="soft-down" style="animation-delay: 100ms;" href="[art-linkedin]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-linkedin.svg" alt="linkedin" style="margin-right: 15px;"></a>
+            </div>
+            <form action="javascript:artSearch('[art-search]','art-search-field-b');" class="cross-center">
+                <input type="text" id="art-search-field-b" class="art-search-box fadein" style="animation-delay:1600ms" placeholder="Search">
+                <input type="image" src="[art-path]images/search.svg" class="hover fadein" style="animation-delay:1800ms; margin-left:4px; width: 40px;">
+                <a href="#menu" style="width: 60px;"><img src="[art-path]images/menu-burger.svg" class="hover fadein" style="animation-delay:1400ms; height:40px;"></a>
+            </form>
+        </div>
+    </div>
+    <!--mobile header-->
+    <div class="header d-md-none cross-center">
+        <div class="col-5 cross-center soft-down" style="animation-delay: 700ms">
+            <img onclick="window.location.href='[art-home]'" src="[art-path]images/dark-yellow.svg">
+        </div>
+        <div class="col-7 cross-center end">
+            <a class="soft-down" style="width:40px; animation-delay:900ms" href="#menu"><img src="[art-path]images/search.svg" style="width:40px;"></a>
+            <a class="soft-down" style="width:40px; animation-delay:800ms" href="#menu"><img src="[art-path]images/menu-burger.svg"></a>
+        </div>
+    </div>
+<!-- contents start -->
+[art-contents]
+<!-- contents end -->
+</div>
+<!-- sticky footer end -->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row cross-center">
+            <div class="col-lg-7 col-xl-4">
+                <p class="footer-area-address">[art-address]</p>
+            </div>
+            <div class="col-lg-3 col-xl-4 footer-area-logo center" >
+                <img class="site-logo-footer" onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+            </div>
+            <div class="col-lg-2 col-xl-4 footer-area-icons">
+                <a href="[art-facebook]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+                <a href="[art-twitter]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-twitter.svg" alt="twitter"></a>
+                <a href="[art-linkedin]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-linkedin.svg" alt="linkedin" style="margin-right: 15px;"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-strip">ALL COPYRIGHTS ARE RESERVED</div>
+[art-footer]
+</body>
+</html>

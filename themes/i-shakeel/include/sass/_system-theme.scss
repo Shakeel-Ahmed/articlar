@@ -1,0 +1,186 @@
+/* SASS Document */
+
+    $opacity    : 0.5;
+    $gutter-size: 30px;
+    $sides : top bottom left right;
+
+    $red      : #F44336;
+    $green    : #4CAF50;
+    $blue     : #2196F3;
+    $yellow   : #FFEB3B;
+    $purple   : #9C27B0;
+    $indigo   : #3F51B5;
+    $teal     : #009688;
+    $cyan     : #00BCD4;
+    $gray     : #607D8B;
+    $dark-gray: #263238;
+    $orange   : #FF9800;
+
+    $material-colors:
+    (
+      "red"     : $red,
+      "green"     : $green,
+      "blue"      : $blue,
+      "yellow"    : $yellow,
+      "purple"    : $purple,
+      "black"     : #000000,
+      "white"     : #FFFFFF,
+      "gray"      : $gray,
+      "dark-gray" : $dark-gray,
+      "orange"    : $orange,
+      /*
+      indigo : $indigo,
+      teal   : $teal,
+      cyan   : $cyan
+      */
+    );
+
+    @each $color-name, $color-hex in $material-colors {
+      .art-border-#{$color-name} {border-color:$color-hex !important;}
+      /*
+      .art-button,.art-border-#{$color-name}:hover{background-color: $color-hex;}
+      */
+      .art-text-#{$color-name} {color:$color-hex;}
+      .art-background-#{$color-name} {background-color:$color-hex}
+      .art-overlay-#{$color-name}
+      {
+        background-image:linear-gradient(rgba($color-hex, $opacity),rgba($color-hex, $opacity));
+        height: 100%;
+      }
+    }
+
+    @each $side in $sides{
+      .art-pad-#{$side} {padding-#{$side}:$gutter-size;}
+      .art-margin-#{$side} {margin-#{$side}:$gutter-size;}
+    }
+    .art-button
+    {
+      display: inline-flex;
+      max-width :100%;
+      min-width: 200px;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition-duration: 500ms;
+      /*
+      background-color: transparent;
+      */
+    }
+    .art-button:hover
+    {
+      /*
+      border-color: #FFEB3B;
+      */
+      box-shadow: 0px 15px 5px 1px rgba(10, 20, 30, 0.35), 16px 6px 3px 0 rgba(10, 20, 30, 0.1), -16px 6px 3px 0px rgba(10, 20, 30, 0.1);
+    }
+    .art-button .art-icon{margin-left: 5px; font-size: 32px;}
+    .art-image-container
+    {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .art-background-fix
+    {
+      background-attachment: fixed;
+    }
+    .art-fluid-image
+    {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    .art-jumbotron-base
+    {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        text-align: center;
+    }
+    .art-jumbotron-fullscreen
+    {
+        height: 100vh;
+        @extend .art-jumbotron-base;
+    }
+    .art-jumbotron
+    {
+        min-height: 75vh;
+        @extend .art-jumbotron-base;
+    }
+    .art-jumbotron-title-block
+    {
+      min-height: 150px;
+      @extend .art-jumbotron-base;
+    }
+    .art-jumbotron-overlay
+    {
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+        min-height: 100%;
+        @extend .art-jumbotron-base;
+    }
+    .art-marker
+    {
+        border-radius: 3px;
+        padding: 3px 5px 3px 5px;
+    }
+    .art-marker-large
+    {
+        border-radius: 5px;
+        padding: 5px 10px 5px 10px;
+    }
+    .art-marker-extra-large
+    {
+        border-radius: 6px;
+        padding: 10px 17px 10px 17px;
+    }
+    .art-deco-border
+    {
+      background-position: center;
+      background-repeat: repeat-x;
+      min-height: 20px;
+    }
+    .display-page-floating-panel
+    {
+
+    }
+    .display-page-floating-panel art-icon{background: #263238; width: 30px; height: 30px; border-radius: 100%;}
+
+    /*********************************
+    *
+    *       PAGINATION CLASSES
+    *
+    **********************************/
+
+    .art-pagination
+    {
+      /*text-align: center;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .art-pagi-link
+    {
+      vertical-align:middle;
+      transition-duration:500ms;
+    }
+    .art-pagi-link:hover
+    {
+      opacity: .3;
+    }
+    .art-pagi-link-highlight
+    {
+      background-color: #7779;
+      display: inline-block;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 100%;
+    }

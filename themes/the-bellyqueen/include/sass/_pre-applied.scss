@@ -1,0 +1,20 @@
+/*
+------------------------------------------------------------
+    SASS Document File.
+
+    Define pre applied animation presets on element in
+    this file. This file does not contain any animation
+    presets.
+------------------------------------------------------------
+*/
+
+.button:hover,/*.material-icons:hover,*/a:hover{@extend.blinker;}
+h1,h2,h3,h4,h5,h6{@extend.fadein; animation-delay: 1s;}
+body{@extend .fadein;animation-duration: 1s; animation-delay: .1ms}
+label{@extend .soft-down;animation-delay: 1s;}
+.form,hr{@extend.stretchout;}
+p{@extend .zoomin;animation-delay: 1s;}
+
+//.form{@extend.projectin;}
+.form:focus{@extend.projectout;}
+//.row{@extend.fadein;}

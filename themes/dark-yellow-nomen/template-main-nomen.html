@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="[art-keywords]" />
+    <meta name="description" content="[art-description]"/>
+    <link rel="stylesheet" type="text/css" href="[art-path]include/theme-styles.css">
+    <title>[art-title]</title>
+    [art-header]
+</head>
+<body>
+<!-- sticky footer start -->
+<div class="sticky-footer">
+    <div class="header d-none d-md-flex cross-center">
+        <div class="col-4 cross-center soft-down" style="animation-delay: 700ms">
+            <img class="site-logo" onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+        </div>
+        <div class="col-8 cross-center end">
+            <div class="cross-center center">
+                <a class="soft-down" style="animation-delay: 800ms;" href="[art-facebook]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+                <a class="soft-down" style="animation-delay: 900ms;" href="[art-twitter]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-twitter.svg" alt="twitter"></a>
+                <a class="soft-down" style="animation-delay: 100ms;" href="[art-linkedin]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-linkedin.svg" alt="linkedin" style="margin-right: 15px;"></a>
+            </div>
+            <form action="javascript:artSearch('[art-search]','art-search-field-b');" class="cross-center">
+                <input type="text" id="art-search-field-b" class="art-search-box fadein" style="animation-delay:1600ms" placeholder="Search">
+                <input type="image" src="[art-path]images/search.svg" class="hover fadein" style="animation-delay:1800ms; margin-left:4px; width: 40px;">
+            </form>
+        </div>
+    </div>
+    <!--mobile header-->
+    <div class="header d-md-none cross-center">
+        <div class="col-5 cross-center">
+            <img onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+        </div>
+        <div class="col-7 cross-center end">
+            <form action="javascript:artSearch('[art-search]','art-search-field');" class="cross-center">
+                <input type="text" id="art-search-field" class="art-search-box soft-down" placeholder="Search" style="animation-delay: 800ms">
+                <input type="image" src="images/search.svg" class="soft-down" style="margin-left:4px; width: 40px; animation-delay: 900ms">
+            </form>
+        </div>
+    </div>
+<!-- contents start -->
+[art-contents]
+<!-- contents end -->
+</div>
+<!-- sticky footer end -->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row cross-center">
+            <div class="col-lg-7 col-xl-4">
+                <p class="footer-area-address">[art-address]</p>
+            </div>
+            <div class="col-lg-3 col-xl-4 footer-area-logo center" >
+                <img class="site-logo-footer" onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+            </div>
+            <div class="col-lg-2 col-xl-4 footer-area-icons">
+                <a href="[art-facebook]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+                <a href="[art-twitter]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-twitter.svg" alt="facebook"></a>
+                <a href="[art-linkedin]" target="_blank"><img class="social-media-icon" src="[art-path]images/sm-linkedin.svg" alt="facebook"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-strip">ALL COPYRIGHTS ARE RESERVED</div>
+[art-footer]
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*
+  SAAS document file
+*/
+/*
+
+---------------------------+
+          COLORS           |
+---------------------------+
+*/
+$background       : #263238;
+$background-light : #37474F;
+$highlight-color  : #64B5F6;
+$border           : lighten(#314147,5%);
+$text             : #ffffff;
+$warning          : #FF9800;
+$safe             : #4CAF50;
+$in-progress      : #9C27B0;
+$review           : #FFEB3B;
+
+$colors:
+    (
+      background: $background,
+      highlight : $highlight-color,
+      unpublish : $warning,
+      publish   : $safe,
+      inprogress: $in-progress,
+      review    : $review,
+    );
+
+@each $color-type, $color-hex in $colors {
+  .text-color-#{$color-type}{color:$color-hex !important;}
+  /*
+  .background-color-#{$color-type}{background-color: $color-hex;}
+  */
+}
+
+.display-page-floating-panel
+{
+  display: inline-flex;
+  flex-flow: column;
+  position:fixed;
+  right: 30px;
+  top: 25vh;
+  z-index:100;
+}
+.display-page-floating-panel .art-icon
+{
+  display: inline-flex;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color:#ffffff;
+  background-color:$background;
+  width:40px;height:40px;
+  border:2px solid #64B5F6;
+  border-radius:100%;
+}
+.hover{transition-duration: 250ms;cursor: pointer;}
+.hover:hover{color:$highlight-color;}

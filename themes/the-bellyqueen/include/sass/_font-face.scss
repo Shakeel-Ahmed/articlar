@@ -1,0 +1,38 @@
+    /* SAAS Document */
+
+    $heading-font : "Montserrat Regular";
+    $body-font    : "Open Sans Light";
+    $black-font   : "Avenir Bold";
+    $thin-font    : "Open Sans Light";
+    $font-path    : "fonts/";
+
+
+    @font-face {
+      font-family: "#{$heading-font}";
+      src: url('#{$font-path}montserrat-regular.woff') format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "#{$body-font}";
+      src: url('#{$font-path}open-sans-light.woff') format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "#{$black-font}";
+      src: url('#{$font-path}avenir-bold.woff') format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    .black-font
+    {
+      font-family: "#{$black-font}", "Arial Black";
+    }
+    .thin-font
+    {
+      font-family: "#{$thin-font}", "Arial";
+    }
+
+
+    @import "iconize";

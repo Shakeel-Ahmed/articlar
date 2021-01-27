@@ -1,0 +1,353 @@
+/*
+  SAAS document file
+*/
+/*
+---------------------------+
+          VARIABLES        |
+---------------------------+
+*/
+
+$background   : #2C2D2E;
+$accent-color : #EA202E;
+$text-color   : #EEEEEE;
+$border       : darken($accent-color,15%);
+
+$grid-gutter-width : 30px;
+$grid-gutter-width : 30px;
+
+$line-height: 1.3;
+$heading-lh-factor : 1;
+
+/*
+--------------------------
+        Typography
+--------------------------
+*/
+
+$body-font-size: 100%;
+
+h1,h2,h3,h4,h5,h6
+{
+  font-family: $heading-font, sans-serif;
+  /*
+  letter-spacing: .05em;
+  */
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #EEEEEE;
+}
+
+h1{font-size: 2.000em; line-height: 100% * $heading-lh-factor;}
+h2{font-size: 1.500em; line-height: 100% * $heading-lh-factor;}
+h3{font-size: 1.125em; line-height: 100% * $heading-lh-factor;}
+h4{font-size: 1.000em; line-height: 100% * $heading-lh-factor;}
+h5{font-size: 0.875em; line-height: 100% * $heading-lh-factor;}
+h6{font-size: 0.750em; line-height: 100% * $heading-lh-factor;}
+
+label
+{
+  font-family: $heading-font, sans-serif;
+  text-transform: uppercase;
+  margin-top: $grid-gutter-width;
+  letter-spacing: 2pt;
+  @extend .cross-center;
+}
+blockquote
+{
+  font-family: $body-font;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing:.05em;
+  padding: 30px;
+  border-left: 5px solid $accent-color;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Theme Settings                                                        |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+body
+{
+  font-family   : $body-font, sans-serif;
+  font-size     : $body-font-size;
+  line-height   : $body-font-size * $line-height;
+  letter-spacing: .025em;
+  word-wrap     : break-word;
+  color         : $text-color;
+  background-color: $background;
+  overflow-x    : hidden;
+  animation-delay: 500ms;
+  @extend .fadein;
+}
+a:visited,a:link
+{
+  color: $text-color;
+  text-decoration: none;
+}
+hr
+{
+  height: 2px;
+  background-color: $border;
+  border: 0px;
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
+}
+.sticky-footer{min-height:calc(100vh - 80px);}
+.site-logo{max-width: 220px;cursor: pointer; @extend .hover}
+.site-logo-footer{width:200px;cursor: pointer; @extend .hover}
+
+.header
+{
+  background-color: #252525;
+  min-height: 80px;
+  border-bottom: 1px solid $border;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.header-mobile
+{
+  background-color: #252525;
+  border-bottom: 1px solid $border;
+  @extend  .end;
+
+}
+.social-media-icon{width: 40px; margin-left: 5px; @extend .hover}
+.footer
+{
+  min-height: 100px;
+  border-top:1px solid $border;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.footer-area-address{text-align: center; padding: 16px 0 16px;font-weight:lighter; order: 1;}
+.footer-area-logo{order: 2;}
+.footer-area-icons{display:flex; align-items:flex-start; justify-content:flex-end; order: 3;}
+
+.art-search-box
+{
+  /*
+  font-family: "Fjalla One Regular", sans-serif;
+  */
+  color: #FBD214;
+  background-color: transparent;
+  width: 100%;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  border: 2px solid $accent-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.footer-strip{font-family: $heading-font, sans-serif;text-align:center;text-transform:uppercase; border-top: 1px solid $border; padding: $grid-gutter-width/3 50px $grid-gutter-width/3 50px; padding-right: 50px;}
+.article-thumbnail
+{
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid $accent-color;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  animation-delay: 1s;
+  @extend .hover,.fadein;
+}
+
+.article-result-date{font-size: 16px; font-weight:bold; letter-spacing: .05em; color: $accent-color;}
+.article-result-heading{min-height:80px; overflow: hidden;}
+.article-result-description{height: 160px; overflow: hidden;}
+
+.art-button
+{
+  font-family: $heading-font;
+  font-size: 16px;
+  font-weight: bold;
+  color: $text-color;
+  background-color: $accent-color;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 200px;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+.art-button-small{padding: 10px 16px 10px 16px; min-width: 160px; @extend .art-button;}
+.art-button:hover{ background-color: $text-color; color: $accent-color;}
+
+
+
+.accent-color-text{color: $accent-color;}
+.accent-color-background{background-color: $accent-color;}
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Form Fields                                                           |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+.form
+{
+  appearance: none;
+  outline: none;
+  font-family: $body-font, Arial, Helvetica, sans-serif;
+  font-size: $body-font-size;
+  color: $text-color;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid $accent-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+  background: $background;
+  transition-duration: 500ms;
+}
+.form:focus
+{
+  background-color: $accent-color;
+  color: white;
+}
+select
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {text-align: left !important; min-height: 320px;}
+.center
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Pagination                                                       |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+/*  art-pagination is applied on pagination container */
+.art-pagination
+{
+  font-family: $heading-font, sans-serif;
+  font-size: 18px;
+  font-weight:bolder;
+  @extend .center,.cross-center;
+}
+.art-pagi-link
+{
+  margin: 0 5px 0 5px;
+  width: 40px;
+  transition-duration: 300ms;
+}
+.art-pagi-link:hover{filter: grayscale(100%) opacity(.4);}
+.art-pagi-link-highlight
+{
+  color: $accent-color;
+}
+.end
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.cross-center
+{
+  display: flex;
+  align-items: center;
+}
+.cross-end
+{
+  display: flex;
+  align-items: flex-end;
+}
+.spread
+{
+  justify-content: space-between;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Animation Preset                                                      |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+.circle-around
+{
+  --border-color: #5ba741;
+  --border-weight: 2px;
+  --dash-size: 28px;
+  --gap-size: 28px;
+}
+.circle-around svg rect
+{
+  stroke: yellow;
+  stroke-width: 4;
+  stroke-dasharray: 400;
+  animation: animate-b 1s linear infinite;
+}
+.circle-around:hover{};
+@keyframes animate-b {
+  0%
+  {
+    stroke-dashoffset: 800;
+  }
+  100%
+{
+  stroke-dashoffset: 0;
+}
+}
+
+.soft-down {
+  animation-name: soft-down;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+@keyframes soft-down {
+  0%   {opacity: 0; transform: translate3d(0, -100%, 0);}
+  100% {opacity: 1; transform: none;}
+}
+.fadein
+{
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes fade-in {
+  0%   {opacity: 0}
+  100% {opacity: 1}
+}
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Media Query                                                           |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+.hover{transition-duration: 500ms;}
+.hover:hover {opacity: .5;}
+
+@media (max-width: 768px) {
+  h1,h2,h3,h4,h5,h6{text-align: center;}
+  .header{padding:0px; min-height: 60px;}
+  .site-logo{max-width: 220px;}
+  .social-media-icon{width: 40px;margin-left: 5px;}
+  .art-search-box{width: 80%;}
+  .article-result-date{font-size: 18px;}
+  .footer-area-address{order: 1;}
+  .footer-area-logo{order: 3; padding-bottom: $grid-gutter-width/2}
+  .footer-area-icons{display:flex; align-items:flex-start; justify-content: center; order: 2; padding-bottom: $grid-gutter-width/2}
+  .footer-area-icons .social-media-icon{width:40px; margin-left:$grid-gutter-width/2}}
+@media (min-width: 768px) {
+  .footer-area-address{order: 1;}
+  .footer-area-logo{order: 3; padding-bottom: $grid-gutter-width/2}
+  .footer-area-icons{display:flex; align-items:flex-start; justify-content: center; order: 2; padding-bottom: $grid-gutter-width/2}
+}

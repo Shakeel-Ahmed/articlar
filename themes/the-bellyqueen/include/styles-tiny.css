@@ -1,0 +1,15 @@
+@import "styles.css";
+
+.section {
+  border: 2px dashed #8080ff;
+  box-sizing: border-box;
+}
+.section-fullwidth {
+  border: 2px dashed #ff8080;
+  box-sizing: border-box;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+  border: 2px dashed #80ff80;
+  box-sizing: border-box;
+}
+body,p,hr,h1,h2,h3,h4,h5,h6,label,.form,.form:focus,.button:hover {animation-duration:0s; animation-delay: 0s;}

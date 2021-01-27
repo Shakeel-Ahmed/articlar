@@ -1,0 +1,85 @@
+    /*--- SASS  file ---*/
+
+//    $grid-gutter-width:15px;
+
+    .reder{border: 1px solid red;}
+
+    /*
+    ------------------------------------
+           Alignment & Adjustments
+    ------------------------------------
+
+    */
+    .column
+    {
+        display: flex;
+        flex-flow: column;
+    }
+    .center
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .end
+    {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    .cross-center
+    {
+        display: flex;
+        align-items: center;
+    }
+    .cross-end
+    {
+        display: flex;
+        align-items: flex-end;
+    }
+    .spread
+    {
+        justify-content: space-between;
+    }
+
+    .vspace    {margin: $grid-gutter-width 0 $grid-gutter-width 0;}
+    .vspace-1  {margin: $grid-gutter-width/2 0 $grid-gutter-width/2 0;}
+    /*
+    .vspace-2  {margin: $grid-gutter-width/3 0 $grid-gutter-width/3 0;}
+    */
+
+    .hspace     {margin: 0 $grid-gutter-width 0 $grid-gutter-width;}
+    .hspace-1   {margin: 0 $grid-gutter-width/2 0 $grid-gutter-width/2;}
+    /*
+    .hspace-2   {margin: 0 $grid-gutter-width/3 0 $grid-gutter-width/3;}
+    */
+
+    .space      {margin: $grid-gutter-width;}
+    .space-1    {margin: $grid-gutter-width/2;}
+    /*
+    .space-2    {margin: $grid-gutter-width/3;}
+    */
+
+    .space-left     {margin-left: $grid-gutter-width;}
+    .space-left-1   {margin-left: $grid-gutter-width/2;}
+    /*
+    .space-left-2   {margin-left: $grid-gutter-width/3;}
+    */
+
+    .space-right    {margin-right: $grid-gutter-width;}
+    .space-right-1  {margin-right: $grid-gutter-width/2;}
+    /*
+    .space-right-2  {margin-right: $grid-gutter-width/3;}
+    */
+
+    .space-top      {margin-top: $grid-gutter-width;}
+    .space-top-1    {margin-top: $grid-gutter-width/2;}
+    /*
+    .space-top-2    {margin-top: $grid-gutter-width/3;}
+    */
+
+    .space-bottom   {margin-bottom: $grid-gutter-width;}
+    .space-bottom-1 {margin-bottom: $grid-gutter-width/2;}
+    /*
+    .space-bottom-2 {margin-bottom: $grid-gutter-width/3;}
+    */

@@ -1,0 +1,609 @@
+/*
+  SAAS document file
+*/
+/*
+
+    ---------------------------
+         GLOBAL VARIABLES
+    ---------------------------
+
+*/
+
+    $primary-color    : #666666;
+    $secondary-color  : #2196F3;
+
+    $text-color       : #111;
+    $text-color-alt   : #FFF;
+
+    $background       : #FFF;
+    $background-alt   : #444;
+
+    $color-danger 	: #FF0000;
+    $color-warning	: #ff9800;
+    $color-action 	: #1565C0;
+    $color-lighter	: #CCC;
+
+    $headerHeight: 90px;
+    $headerStripeHeight: 50px;
+    $buttonColor: #ffffff;
+    $normalizedHeight: 40vh;
+
+    $gutter:15px;
+
+
+
+/*
+
+---------------------------
+        DEFAULTS
+---------------------------
+
+*/
+
+
+
+    body
+    {
+      font-family       : "#{$body-font}", Arial, Verdana;
+      font-size         : 18px;
+      color             : $text-color;
+      background-color  : $background;
+      word-wrap         : break-word;
+    }
+    a:visited,a:link
+    {
+      //font-family: $heading-
+      font-weight: 600;
+      color: darken($primary-color, 5%);
+      text-decoration: none;
+      letter-spacing: .1em;
+    }
+
+/*
+
+     --------------------------
+            Typegraphy
+     --------------------------
+
+*/
+    .headings
+    {
+      font-family: "#{$heading-font}", Arial, Helvetica, sans-serif, Verdana;
+      font-weight: normal;
+    }
+    h1,h2,h3,h4,h5,h6 {@extend .headings;}
+    h1
+    {
+      font-size: 28px;
+      letter-spacing: .5pt;
+      margin: 10px 0 10px 0;
+    }
+    h2
+    {
+      font-size: 40px;
+      letter-spacing: -.2.5pt;
+      margin: 15px 0 15px 0;
+    }
+    h3
+    {
+      font-size: 48px;
+      letter-spacing: -.4pt;
+      margin: 20px 0 20px 0;
+
+    }
+    h4
+    {
+      font-size: 56px;
+      letter-spacing: -.5.5pt;
+      margin: 25px 0 25px 0;
+
+    }
+    h5
+    {
+      font-size: 62px;
+      letter-spacing: -.7pt;
+      margin: 30px 0 30px 0;
+    }
+    h6
+    {
+      font-size: 70px;
+      letter-spacing: -1pt;
+      margin: 35px 0 35px 0;
+    }
+    hr
+    {
+      height: 2px;
+      background-color: darken($primary-color,0);
+      border: 0px;
+      margin: 0px;
+    }
+    p
+    {
+      letter-spacing: .5pt;
+      text-align: justify;
+    }
+    blockquote
+    {
+      color: darken($primary-color,30);
+      text-align: justify;
+      border-left: 5px solid darken($primary-color,0);
+      padding: 0 20px 0 20px;
+    }
+    .text-small
+    {
+      font: $body-font;
+      font-size: 16px;
+    }
+    .heading
+    {
+      font-family: $heading-font;
+    }
+/*
+
+     --------------------------
+              COLORS
+     --------------------------
+
+*/
+
+    .invert
+    {
+      filter: invert(100);
+    }
+    .alternate-colors
+    {
+      color: $text-color-alt;
+      background-color: $background-alt;
+    }
+    .alternate-colors a:visited,a:link{color: lighten($primary-color,0%);}
+    .primary-color-text {color: $primary-color !important;}
+    .background-alt{background-color: $background-alt;}
+    .background-dark{background-color: #000 !important;}
+
+/*
+
+    ---------------------------
+          THEME SETTINGS
+    ---------------------------
+
+*/
+
+    .text-color-alt{color: $text-color-alt;}
+    .background-alt{background-color: $background-alt;}
+
+
+    .header-top-stripe
+    {
+      background-color: #111;
+      min-height: $headerStripeHeight;
+      color: #a5a5a5;
+      border-bottom: 1px solid #000;
+      font-family: $black-font, Arial, Verdana;
+      font-size: 12px;
+      padding: 0 20px 0 20px;
+      letter-spacing: .5pt;
+    }
+    .header
+    {
+      min-height: $headerHeight;
+      background-color: darken($background-alt,30%);
+      padding: 0 20px 0 20px;
+      border-bottom: 1px solid #666;
+      /*
+        padding: 0 15px 0 15px;
+      */
+    }
+    .footer
+    {
+      background-color: #171717;
+      color: $text-color-alt;
+      min-height:80px;
+/*
+      padding: 0 calc((100vw - 1100px)/2) 0 calc((100vw - 1100px)/2);
+*/
+    }
+    .footer-caption
+    {
+      font-family: $heading-font;
+      font-size: 20px;
+      letter-spacing: .5pt;
+      color: $text-color-alt;
+      opacity: .4;
+    }
+    .sticky-footer
+    {
+      min-height:calc(100vh - #{$headerHeight});
+    }
+    .standard-height
+    {
+      height: $normalizedHeight;
+    }
+
+/*
+            icon setting
+     --------------------------
+*/
+    .icon-inline
+    {
+      font-family: iconize;
+      color: #EEEEEE;
+      opacity: .8;
+      position: relative;
+    }
+    .icon-inline-tiny
+    {
+      @extend .icon-inline;
+      font-size: 16px;
+    }
+    .icon-inline-regular
+    {
+      @extend .icon-inline;
+      font-size: 24px;
+    }
+    .icon-inline-medium
+    {
+      @extend .icon-inline;
+      font-size: 28px;
+    }
+    .round-icon
+    {
+      color : #FFDF22;
+      background-color: darken($primary-color,15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 110px;
+      border: 3px solid darken($primary-color,20);
+    }
+    .icon-tiny
+    {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+     // border: 2px solid #666;
+      @extend.round-icon;
+    }
+    .icon-small
+    {
+      font-size: 25px;
+      width: 40px;
+      height: 40px;
+      @extend.round-icon;
+    }
+    .icon
+    {
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      @extend.round-icon;
+    }
+    .icon-medium
+    {
+      font-size: 40px;
+      width: 70px;
+      height: 70px;
+      @extend.round-icon;
+    }
+    .icon-large
+    {
+      font-size: 70px;
+      width: 110px;
+      height: 110px;
+      @extend.round-icon;
+    }
+
+/*
+     -------------------------
+              ELEMENTS
+     -------------------------
+*/
+
+  .image-stablizer
+  {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .image
+  {
+    height: 100%;
+    min-height: 300px;
+    border-radius: 7px;
+    @extend .image-stablizer,.shadows;
+  }
+  .jumbotron
+  {
+    min-height: calc(100vh - #{($headerHeight + $headerStripeHeight)});
+    text-align: center;
+    display: block;
+    @extend .image-stablizer;
+  }
+  .jumbotron-half
+  {
+    min-height: calc(70vh - #{($headerHeight + $headerStripeHeight)});
+    text-align: center;
+    @extend .image-stablizer;
+  }
+  .image-block
+  {
+    height: 150px;
+    @extend .image-stablizer;
+  }
+  .overlay-image-block
+  {
+    color: lighten($primary-color,100);
+    text-align: center;
+    background: url(../images/transparent-overlay.png);
+    min-height: 150px;
+  }
+  .overlay-jumbotron
+  {
+    color: lighten($primary-color,100);
+    text-align: center;
+    background: url(../images/transparent-overlay.png);
+    min-height: calc(100vh - #{($headerHeight + $headerStripeHeight)});
+  }
+  .overlay-jumbotron-half
+  {
+    color: lighten($primary-color,100);
+    text-align: center;
+    background: url(../images/transparent-overlay.png);
+    min-height: calc(70vh - #{($headerHeight + $headerStripeHeight)});
+  }
+  .title-block
+  {
+    background-image: url(../images/tribal.svg);
+    background-color: darken($primary-color,5);
+    min-height: 150px;
+    color: lighten($primary-color,100);
+    text-align: center;
+    letter-spacing: 2pt;
+    @extend .image-stablizer,.column,.center,.cross-center;
+  }
+
+/*
+        Decorative Elements
+     --------------------------
+*/
+    .bismillah
+    {
+      height:80px;
+      background-image: url(../../../images/bismillah.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity:.5;
+      //margin: $gutter 0 $gutter 0;
+    }
+    .border-roman
+    {
+      height:40px;
+      background-color: darken($primary-color,5);
+      background-image: url(../../../images/roman-border.svg);
+      background-position: center;
+      background-repeat: repeat-x;
+      border-top:2px solid #000;
+      border-bottom: 2px solid #000;
+    }
+    .deco-end
+    {
+      height: 150px;
+      background-image: url(../../../images/deco-end-01.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: $gutter 0 $gutter;
+      opacity: .5;
+    }
+/*
+          Card Styling
+     --------------------------
+*/
+    .card
+    {
+      min-height: 25vh;
+      box-sizing: border-box;
+      border: 2px solid darken($primary-color,0);
+      border-radius: 6px;
+      padding: 20px;
+      @extend.column,.cross-center;
+    }
+    .card-2
+    {
+      min-height: 200px;
+      box-sizing: border-box;
+      border: 1px solid #333;
+      border-radius: 7px;
+      padding: 5px;
+      @extend.column,.cross-center,.shadows;
+    }
+    .card-3
+    {
+      min-height: 200px;
+      box-sizing: border-box;
+      border: 2px solid #000000;
+      border-radius: 9px;
+      padding: 5px;
+      @extend.column,.cross-center
+    }
+    .card-2-pic
+    {
+      border-radius: 7px;
+      width: 100%;
+      height: 250px;
+      @extend .image-stablizer;
+    }
+    .card-heading
+    {
+      font-family: "#{$black-font}","#{$heading-font}";
+      text-align: center;
+      height: 100px;
+      overflow: hidden;
+    }
+    .list-view-box
+    {
+      //background-color: #eee;
+      background-color: #EEFFEE;
+      border: 1px solid #AACCAA;
+      padding: 5px 10px 5px 10px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+
+/*
+          Buttons & Forms
+     --------------------------
+*/
+
+    .form
+    {
+      font-family: "#{$body-font}", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      letter-spacing: .5pt;
+      width: 100%;
+      padding: 10px;
+      border: 2px solid darken($primary-color,0);
+      box-sizing: border-box;
+      border-radius: 4px;
+      text-align: center;
+    }
+    label
+    {
+      font-family: "#{$heading-font}", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    textarea
+    {
+      height: $normalizedHeight;
+      text-align: left !important;
+      resize: vertical;
+    }
+    select
+    {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .button
+    {
+      font-family: $black-font;
+      font-size: 18px;
+      color: $buttonColor;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      background-color: $color-action;
+      border-radius: 5px;
+      border: 0px;
+      width: 200px;
+      height: 50px;
+      margin: 10px 10px 10px 0;
+      cursor: pointer;
+    }
+    .themeatic
+    {
+      background: darken($primary-color,15);
+      border: 2px solid lighten($primary-color,5);
+    }
+    .hallow
+    {
+      background: transparent;
+      border: 2px solid #000000;
+      color: $text-color;
+    }
+    .hallow-themeatic
+    {
+      background: transparent;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+    }
+    .button-tiny{@extend.button; width: 60px; font-size: 14px;}
+    .button-small{@extend.button; width: 150px; font-size: 16px;}
+    .button-large{@extend.button; width: 300px; font-size:20px;}
+    .button-extra-large{@extend.button; width: 400px; font-size: 22px;}
+    .image-field
+    {
+      height: 40vh;
+      background-image: url(../images/picture-alt.svg);
+      text-align: left;
+      cursor: pointer;
+      @extend .form;
+      @extend .image-stablizer;
+    }
+    /*- Jquery plugin Validate error indicators  -*/
+    input.error,select.error,textarea.error { border-color: red; }
+    label.error{color:red;font-size:14px;display: none;}
+
+/*
+    Shadows Styling
+ --------------------------
+*/
+
+    .shadows
+    {
+      box-shadow: 0px 3px 8px 1px rgba(10, 20, 30, 0.4);
+    }
+    .shadows-studio
+    {
+      box-shadow: 0px 15px 5px 1px rgba(10, 20, 30, 0.35),
+                  16px 6px 3px 0px rgba(10, 20, 30, 0.1),
+                  -16px 6px 3px 0px rgba(10, 20, 30, 0.1);
+    }
+
+
+/*
+
+------------------------------------------
+        THEME RESPONSIVE SETTINGS
+------------------------------------------
+
+    NOTE:
+    These are purely design theme settings
+    and have nothing to do with responsive
+    grid system.
+    Adjust "_grid.scss" file
+
+*/
+
+    #onelogo{width:210px; max-width: 280px;}
+    // Small Devices
+    @media only screen and (min-width: 1px) and (max-width: 468px)
+    {
+      #onelogo{width:100%;}
+      .jumbotron{min-height: auto;}
+      .jumbotron-half{min-height: 0;}
+      .header-top-stripe{min-height: 0; padding: $gutter/2 20px $gutter/2 20px;}
+      .header{min-height: 0; padding: $gutter 0 $gutter;}
+      .footer{min-height: 0; padding: $gutter 0 $gutter;}
+    }
+    @media only screen and (min-width: 469px) and (max-width: 768px)
+    {
+      /*
+      .jumbotron{min-height:calc(100vh - #{$headerHeight});height:auto;padding-left:$gutter;padding-right:$gutter;}
+      .jumbotron-half{min-height:calc(100vh - #{$headerHeight});height:auto;padding-left:$gutter;padding-right:$gutter;}
+      */
+      #onelogo{width:210px;}
+      .jumbotron{min-height: auto;}
+      .jumbotron-half{min-height: auto;}
+      .header-top-stripe{min-height: 0; padding: $gutter/2 20px $gutter/2 20px;}
+      .header{min-height: auto; padding: $gutter 0 $gutter;}
+      .footer{min-height: auto; padding: $gutter 0 $gutter;}
+      h1,h2,h3,h4,h5,h6{text-align: center;}
+      h4,h5,h6
+      {
+        font-size: 48px;
+        letter-spacing: -.4pt;
+      }
+      p
+      {
+        text-align: left;
+      }
+      blockquote
+      {
+        padding:0 10px 0 10px;
+      }
+      .list-view-box {margin-bottom: 20px !important; text-align: center; border-radius: 0px;}
+    }

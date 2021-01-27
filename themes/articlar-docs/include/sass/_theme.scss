@@ -1,0 +1,343 @@
+/*
+  SAAS document file
+*/
+/*
+---------------------------+
+          VARIABLES        |
+---------------------------+
+*/
+
+$background   : #ffffff;
+$text-color   : #111111;
+$border       : #dddddd;
+$accent-color : black;
+
+$grid-gutter-width : 30px;
+$grid-gutter-width : 30px;
+
+/*
+--------------------------
+        Typography
+--------------------------
+*/
+
+$body-font-size: 18px;
+
+h1,h2,h3,h4,h5,h6
+{
+  font-family: $heading-font, sans-serif;
+  /*
+  letter-spacing: .05em;
+  */
+  font-weight: normal;
+}
+
+h1{font-size: 44px; line-height: 66px;}
+h2{font-size: 38px; line-height: 57px;}
+h3{font-size: 32px; line-height: 48px;}
+h4{font-size: 26px; line-height: 39px;}
+h5{font-size: 22px; line-height: 32px;}
+h6{font-size: 20px; line-height: 24px;}
+
+label
+{
+  font-family: $heading-font, sans-serif;
+  text-transform: uppercase;
+  margin-top: $grid-gutter-width;
+  letter-spacing: 2pt;
+  @extend .cross-center;
+}
+blockquote
+{
+  font-family: $heading-font;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing:.05em;
+  padding: 30px;
+  border-left: 5px solid $accent-color;
+  opacity: .7;
+}
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Theme Settings                                                        |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+body
+{
+  font-family   : $body-font, sans-serif;
+  font-size     : $body-font-size;
+  line-height   : 26px;
+  letter-spacing: .025em;
+  word-wrap     : break-word;
+  color         : $text-color;
+  background-color: $background;
+  overflow-x    : hidden;
+  animation-delay: 500ms;
+  @extend .fadein;
+}
+a:visited,a:link
+{
+  color: $text-color;
+  text-decoration: none;
+}
+hr
+{
+  height: 1px;
+  background-color: $border;
+  border: 0px;
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
+}
+.sticky-footer{min-height:calc(100vh - 70px);}
+.header
+{
+  min-height: 80px;
+  border-bottom: 1px solid $border;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.art-header-links
+{
+  font-family: $heading-font, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+.art-header-links:hover{@extend .fadein;}
+.header-nav-strip{padding: 10px 0 10px; border-bottom: 1px solid $border; text-align: center;}
+.header-logo{width:100%;max-width:200px;cursor:pointer;}
+.header-logo:hover{@extend.fadein-again;}
+
+.social-media-icon{width: 40px;margin-left: 5px;}
+.social-media-icon:hover{@extend .zoomer;}
+
+.footer
+{
+  min-height: 100px;
+  border-top:1px solid $border;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.footer-area-address{text-align: left; padding: 16px 0 16px;font-weight:lighter; order: 1;}
+.footer-area-logo{order: 2;}
+.footer-area-icons{display:flex; align-items:flex-start; justify-content:flex-end; order: 3;}
+
+.art-search-box
+{
+  font-family: $heading-font, sans-serif;
+  width: 100%;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid $accent-color;
+  transition-duration: 500ms;
+}
+.art-search-box:focus{background-color:$accent-color;color:#ffffff;}
+
+.footer-strip{font-family: $heading-font, sans-serif;text-align:center;text-transform:uppercase; border-top: 1px solid $border; padding: $grid-gutter-width/3 50px $grid-gutter-width/3 50px; padding-right: 50px;}
+.article-result-thumbnail{object-fit: cover; width: 100%; height: 300px; border: 2px solid $accent-color; border-radius: 7px; margin-bottom: 15px;transition-duration: 500ms;}
+.article-result-thumbnail:hover{@extend .fadein-again;}
+.article-result-date{font-size: 16px;@extend h4;}
+.article-result-heading{font-size:24px; height:99px; overflow: hidden;}
+.article-result-description{height: 160px; overflow: hidden;}
+
+.art-button
+{
+  font-family: $heading-font;
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  border: 2px solid $accent-color;
+  border-radius: 5px;
+  min-width: 200px;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+.art-button-small{padding: 10px 16px 10px 16px; min-width: 160px; @extend .art-button;}
+.art-button:hover{color: #FFFFFF; background-color: $accent-color;}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Form Fields                                                           |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+.form
+{
+  appearance: none;
+  outline: none;
+  font-family: $body-font, Arial, Helvetica, sans-serif;
+  font-size: $body-font-size;
+  color: $text-color;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $accent-color;
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-align: left;
+  background: $background;
+  transition-duration: 500ms;
+}
+.form:focus
+{
+  background-color: $accent-color;
+  color: white;
+}
+select
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea {text-align: left !important; min-height: 320px;}
+.center
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Pagination                                                            |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+/*  art-pagination is applied on pagination container */
+.art-pagination
+{
+  font-family: $heading-font, sans-serif;
+  font-size: 18px;
+  font-weight:bolder;
+  @extend .center,.cross-center;
+}
+.art-pagi-link
+{
+  margin: 0 5px 0 5px;
+  width: 40px;
+  transition-duration: 300ms;
+}
+.art-pagi-link:hover{filter: grayscale(100%) opacity(.4);}
+.art-pagi-link-highlight
+{
+  color: $accent-color;
+}
+.end
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.cross-center
+{
+  display: flex;
+  align-items: center;
+}
+.cross-end
+{
+  display: flex;
+  align-items: flex-end;
+}
+.spread
+{
+  justify-content: space-between;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Animation Presets                                                     |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+.hover{cursor:pointer;transition-duration: 500ms;}
+.hover:hover{@extend .fadein;}
+
+.zoomin
+{
+  animation-name: zoom-in;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+@keyframes zoom-in
+{
+  0% {transform: scale(0);opacity: 0}
+  40% {opacity: 0;}
+  100% {transform: scale(1);}
+}
+.fadein
+{
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes fade-in {
+  0%   {opacity: 0}
+  100% {opacity: 1}
+}
+.fadein-again
+{
+  animation-name: fade-in-again;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes fade-in-again {
+  0%   {opacity: .5;}
+  100% {opacity: 1;}
+}
+.zoomer
+{
+  animation-name: zoomer-anim;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 200ms;
+}
+@keyframes zoomer-anim
+{
+  0% {transform: scale(2);opacity: 0;}
+  100% {transform: scale(1);opacity: 1;}
+}
+
+
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------+
+                                                            Media Queries                                                         |
+----------------------------------------------------------------------------------------------------------------------------------+
+*/
+
+@media (max-width: 576px) {
+  h1,h2,h3,h4,h5,h6{text-align:center;letter-spacing:.03em;}
+  h1{font-size: 32px; line-height: 48px;}
+  h2{font-size: 24px; line-height: 36px;}
+  h3{font-size: 32px; line-height: 48px; font-style: italic; opacity:.65;}
+  h4{font-size: 24px; line-height: 36px; font-style: italic; opacity:.65;}
+  h5{font-size: 18px; line-height: 27px; line-height: 36px;}
+  h6{font-size: 12px; line-height: 18px;}
+  .header{padding:0px; min-height: 60px;}
+  .social-media-icon{width: 30px;margin-left: 5px;}
+  .art-search-box{width: 80%;}
+  .footer-area-address{text-align:center; order: 1;}
+  .footer-area-logo{order: 3; padding-bottom: $grid-gutter-width/2}
+}
+@media (max-width: 768px) {
+  .header
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header-logo{width:100%;max-width: 220px;}
+  .footer-area-address{order: 1;}
+  .footer-area-logo{order: 3; padding-bottom: $grid-gutter-width/2}
+}
+@media (max-width: 1024px){
+  .footer-area-icons{display:flex; align-items:flex-start; justify-content: center; order: 2; padding-top: $grid-gutter-width/2; padding-bottom: $grid-gutter-width/2;}
+}

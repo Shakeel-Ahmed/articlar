@@ -1,0 +1,25 @@
+     /* SAAS Document */
+
+    $heading-font : "Poppins Bold";
+    $body-font    : "Open Sans Light";
+    $black-font   : $heading-font;
+    $font-path    : "fonts/";
+
+    // heading font
+    @font-face {
+      font-family: "#{$heading-font}";
+      src: url('#{$font-path}poppins-bold.woff') format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+    // body text font
+    @font-face {
+      font-family: "#{$body-font}";
+      src: url('#{$font-path}open-sans-light.woff') format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+/*
+    @import "iconize";
+*/

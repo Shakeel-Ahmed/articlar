@@ -1,0 +1,51 @@
+PAGE STATUS CODES
+--------------------------
+1 = UNDER PROGRESS
+2 = UN-PUBLISHED
+3 = UNDER REVIEW
+4 = PUBLISHED
+5 = HOMEPAGE
+
+BLOG RESULT PAGE TAGS
+------------------------------
+[art-row-title]
+[art-row-image]
+[art-row-thumb]
+[art-row-tiny]
+[art-row-created]
+[art-row-updated]
+[art-row-description]
+[art-row-link]
+[art-row-count]
+
+
+
+PAGE KEYWORDS
+------------------------------
+[art-404] 		: Page not found page
+[art-noresults]	: No search result page
+
+CLEAN UP
+------------------------------
+
+[container-end]
+[add-columns-here]
+[jumbotron-end]
+
+
+
+Sample result page template with all the tags
+------------------------------
+<div>
+<h3>[art-row-title]</h3>
+<img src="[art-row-image]" class="art-fluid-image" style="width:240px;height:240px;">
+<img src="[art-row-thumb]" class="art-fluid-image" style="width:120px;height:120px;">
+<img src="[art-row-tiny]" class="art-fluid-image" style="width:60px;height:60px;">
+<label>Created: [art-row-created]</label>
+<label>Updated: [art-row-updated]</label>
+<p>[art-row-description]</p>
+<a href="[art-row-link]">READ MORE</a>
+</div>
+
+----------------------------------------
+return preg_replace(array('/<!--(.*)-->/Uis',"/[[:blank:]]+/"),array('',' '),str_replace(array("\n","\r","\t"),'',$buf));

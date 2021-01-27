@@ -1,0 +1,25 @@
+     /* SAAS Document */
+
+    $heading-font : "Fjalla One Regular";
+    $body-font    : "Open Sans Light";
+    $black-font   : $heading-font;
+    $font-path    : "fonts/";
+
+    // heading font
+    @font-face {
+      font-family: "#{$heading-font}";
+      src: url('#{$font-path}fjallah-one-webfont.woff') format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+    // body text font
+    @font-face {
+      font-family: "#{$body-font}";
+      src: url('#{$font-path}open-sans-light.woff') format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+/*
+    @import "iconize";
+*/

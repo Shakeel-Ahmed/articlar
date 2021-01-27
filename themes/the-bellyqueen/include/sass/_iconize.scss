@@ -1,0 +1,158 @@
+/* Scss Document */
+
+@font-face {
+  font-family: "iconize";
+  src:url("#{$font-path}iconize.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "iconize" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="sa-"]:before,
+[class*=" sa-"]:before {
+  font-family: "iconize" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sa-email:before {
+  content: "\61";
+}
+.sa-home:before {
+  content: "\62";
+}
+.sa-user:before {
+  content: "\63";
+}
+.sa-twitter:before {
+  content: "\64";
+}
+.sa-facebook:before {
+  content: "\65";
+}
+.sa-skype:before {
+  content: "\66";
+}
+.sa-linkedin:before {
+  content: "\67";
+}
+.sa-lock:before {
+  content: "\68";
+}
+.sa-pinterest:before {
+  content: "\69";
+}
+.sa-google-plus:before {
+  content: "\6a";
+}
+.sa-instagram:before {
+  content: "\6b";
+}
+.sa-whatsapp:before {
+  content: "\6c";
+}
+.sa-search:before {
+  content: "\6d";
+}
+.sa-image:before {
+  content: "\6e";
+}
+.sa-help:before {
+  content: "\6f";
+}
+.sa-settings:before {
+  content: "\70";
+}
+.sa-edit:before {
+  content: "\71";
+}
+.sa-exit:before {
+  content: "\72";
+}
+.sa-clock:before {
+  content: "\73";
+}
+.sa-calendar:before {
+  content: "\74";
+}
+.sa-download:before {
+  content: "\75";
+}
+.sa-menu-burger:before {
+  content: "\76";
+}
+.sa-item-selected:before {
+  content: "\77";
+}
+.sa-item-unselected:before {
+  content: "\78";
+}
+.sa-list:before {
+  content: "\79";
+}
+.sa-list-cube:before {
+  content: "\7a";
+}
+.sa-add:before {
+  content: "\41";
+}
+.sa-cancel:before {
+  content: "\42";
+}
+.sa-view:before {
+  content: "\43";
+}
+.sa-unlock:before {
+  content: "\44";
+}
+.sa-articles:before {
+  content: "\45";
+}
+.sa-delete:before {
+  content: "\46";
+}
+.sa-phone:before {
+  content: "\47";
+}
+.sa-rss:before {
+  content: "\48";
+}
+.sa-publish:before {
+  content: "\4a";
+}
+.sa-arrow-up:before {
+  content: "\4c";
+}
+.sa-arrow-down:before {
+  content: "\49";
+}
+.sa-arrow-left:before {
+  content: "\4b";
+}
+.sa-arrow-right:before {
+  content: "\4d";
+}
+.sa-activate:before {
+  content: "\4f";
+}
+.sa-link:before {
+  content: "\4e";
+}

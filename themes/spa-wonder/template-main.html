@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="[art-keywords]" />
+    <meta name="description" content="[art-description]"/>
+    <link rel="stylesheet" type="text/css" href="[art-path]include/theme-styles.css">
+    <title>[art-title]</title>
+    [art-header]
+</head>
+<body>
+<div class="sticky-footer">
+    <!--    HEADER DESKTOP / TABLETS START  -->
+    <div class="container-fluid header d-none d-md-flex">
+        <div class="col-md-3 col-lg-3">
+            <a href="[art-home]"><img src="[art-sitelogo]" class="site-logo"></a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="header-nav-links-container cross-center">
+                <a href="javascript:void(0)"><div class="header-link">Ipsum</div></a>
+                <a href="javascript:void(0)"><div class="header-link">Dolor</div></a>
+                <a href="javascript:void(0)"><div class="header-link">Muspi</div></a>
+                <a href="javascript:void(0)"><div class="header-link">Sitat</div></a>
+            </div>
+        </div>
+        <div class="d-none d-lg-flex col-lg-3 end">
+            <!--    SOCIAL MEDIA SHARE  -->
+            <a href="[art-facebook]"><img class="sm-header" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+            <a href="[art-twitter]"><img class="sm-header" src="[art-path]images/sm-twitter.svg" alt="twitter"></a>
+            <a href="[art-linkedin]"><img class="sm-header" src="[art-path]images/sm-linkedin.svg" alt="linkedin"></a>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <form action="javascript:artSearch('[art-search]','art-search-field');" class="cross-center">
+                <input type="text" id="art-search-field" class="art-search-box" placeholder="Search">
+                <input type="image" src="[art-path]images/search.svg" class="sm-header" style="width: 42px;">
+            </form>
+        </div>
+    </div>
+    <!--    HEADER DESKTOP / TABLETS END    -->
+    <!--    HEADER MOBILE / SMALL DEVICES START -->
+    <div class="header d-md-none">
+        <!--    SITE LOGO CONTROLLED BY `site-logo` CSS CLASS -->
+        <div>
+            <img class="site-logo" onclick="window.location.href='[art-home]'" src="[art-path]images/spawonder-logo.svg">
+            <form action="javascript:artSearch('[art-search]','art-search-field-b');" class="cross-center">
+                <input type="text" id="art-search-field-b" class="art-search-box" placeholder="Search" style="margin-left: auto;">
+                <input type="image" src="[art-path]images/search.svg" class="sm-header">
+            </form>
+        </div>
+        <div class="header-nav-links-container">
+            <a href="javascript:void(0)"><span class="header-link">Ipsum</span></a>
+            <a href="javascript:void(0)"><span class="header-link">Dolor</span></a>
+            <a href="javascript:void(0)"><span class="header-link">Muspi</span></a>
+            <a href="javascript:void(0)"><span class="header-link">Sitat</span></a>
+        </div>
+    </div>
+    <!--    HEADER MOBILE / SMALL DEVICES END -->
+<!--    CONTENTS START  -->
+[art-contents]
+<!--    CONTENTS END    -->
+</div>
+<!-- sticky footer end -->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row cross-center">
+            <div class="col-md-3 footer-sm-container">
+                <a href="[art-facebook]"><img class="sm-footer" src="[art-path]images/sm-facebook.svg" alt="facebook"></a>
+                <a href="[art-twitter]"><img class="sm-footer" src="[art-path]images/sm-twitter.svg" alt="twitter"></a>
+                <a href="[art-linkedin]"><img class="sm-footer" src="[art-path]images/sm-linkedin.svg" alt="linkedin"></a>
+            </div>
+            <div class="col-md-5 footer-address-container"><p>[art-address]</p></div>
+            <div class="col-md-4 footer-logo-container">
+                <img class="site-logo" onclick="window.location.href='[art-home]';" src="[art-sitelogo]">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-strip">
+    <span>ALL COPYRIGHTS ARE RESERVED</span>
+</div>
+[art-footer]
+</body>
+</html>
